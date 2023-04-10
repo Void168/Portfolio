@@ -71,13 +71,16 @@ function Banner() {
               viewport={{ once: false, amount: 0.7 }}
               className="flex text-3xl gap-x-6 max-w-max mx-auto lg:mx-0 my-4"
             >
-              <a>
+              <a
+                href="https://www.facebook.com/Mr.H.LadyKillah/"
+                target="_blank"
+              >
                 <FaFacebook />
               </a>
-              <a>
+              <a href="https://github.com/Void168" target="_blank">
                 <FaGithub />
               </a>
-              <a>
+              <a href="https://zalo.me/0866243888" target="_blank">
                 <img src="../zalo.png" alt="zalo" className="h-8" />
               </a>
             </motion.div>

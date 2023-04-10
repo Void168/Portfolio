@@ -5,11 +5,10 @@ import Work from './components/Work'
 import Header from './components/Header'
 import Banner from './components/Banner'
 import Navbar from './components/Navbar'
-import Services from './components/Services'
 
 function App() {
   return (
-    <div className="bg-site bg-cover bg-no-repeat overflow-hidden">
+    <div className="bg-site bg-cover bg-fixed overflow-hidden">
       <header>
         <Header />
         <Banner />
@@ -17,16 +16,9 @@ function App() {
       </header>
       <main>
         <About />
-        <Services />
         <Work />
         <Contact />
-        <div className="h-[4000px]"></div>
-        <Routes>
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/services" element={<Services />} />
-        </Routes>
+        <div></div>
       </main>
       <footer></footer>
     </div>
