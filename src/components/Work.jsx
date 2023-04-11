@@ -86,8 +86,16 @@ function Work() {
             {/* text */}
             <div>
               <p className="h2 leading-tight">My Lastest Work</p>
-              <p>Giới thiệu</p>
-              <button className="btn btn-sm">View all projects</button>
+              <p className="h3">
+                My projects (Mostly I did it alone, I have references on youtube
+                too, but I know how to make them my own :) )
+              </p>
+              <a
+                href="https://github.com/Void168?tab=repositories"
+                target="_blank"
+              >
+                <button className="btn btn-sm">View all projects</button>
+              </a>
             </div>
             <div>
               <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-x-4 gap-y-8 my-8">

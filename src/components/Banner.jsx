@@ -7,6 +7,9 @@ import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion'
 
 import { fadeIn } from '../variants'
+
+import { Link } from 'react-scroll'
+
 function Banner() {
   return (
     <section
@@ -46,9 +49,11 @@ function Banner() {
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
-              className="my-8 mx-auto lg:mx-0"
+              className="my-8 mx-auto lg:mx-0 text-xl"
             >
-              Giới thiệu
+              I’m focused on building responsive front-end web applications
+              integrating back-end technologies. My goal in the future is to
+              become a full-stack developer.
             </motion.p>
             <motion.div
               variants={fadeIn('up', 1.2)}
@@ -57,7 +62,9 @@ function Banner() {
               viewport={{ once: false, amount: 0.7 }}
               className="flex items-center max-w-max gap-x-6 mb-12 lg:mx-0 mx-auto lg-mx-0"
             >
-              <button className="btn btn-lg mr-4">Contact me</button>
+              <Link to="contact" activeClass="active" smooth={true} spy={true}>
+                <button className="btn btn-lg mr-4">Contact me</button>
+              </Link>
               <a href="#" className="text-gradient btn-link">
                 My Portfolio
               </a>
