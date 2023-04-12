@@ -1,12 +1,21 @@
 import React from 'react'
 
-import { Link } from 'react-router-dom'
-
 import { motion } from 'framer-motion'
 
 import { fadeIn } from '../variants'
 
-function Project({ name, imgUrl, content, tech, url }) {
+import ProjectModal from './ProjectModal'
+
+function Project({
+  name,
+  imgUrl,
+  content,
+  tech,
+  url,
+  description,
+  features,
+  code,
+}) {
   return (
     <motion.div
       variants={fadeIn('up', 0.1)}
@@ -26,24 +35,29 @@ function Project({ name, imgUrl, content, tech, url }) {
                 viewport={{ once: false, amount: 0.7 }}
                 className="flex flex-row flex-wrap justify-center"
               >
-                {tech.map((tech) => (
+                {tech.map((t) => (
                   <li className="text-sm text-center border-[#6EE7B7] border-2 m-2 px-2 py-1 rounded-full shadow-sm shadow-green-200">
-                    {tech}
+                    {t}
                   </li>
                 ))}
               </motion.ul>
             </div>
-            <Link to={url} target="_blank">
-              <motion.button
-                variants={fadeIn('down', 0.3)}
-                initial="hidden"
-                whileInView={'show'}
-                viewport={{ once: false, amount: 0.5 }}
-                className="px-8 border-2 rounded-full hover:bg-white hover:bg-opacity-70 hover:text-black duration-150 ease-in-out hover:shadow-2xl hover:shadow-gray-400"
-              >
-                View
-              </motion.button>
-            </Link>
+            <motion.div
+              variants={fadeIn('down', 0.1)}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{ once: false, amount: 0.7 }}
+            >
+              <ProjectModal
+                url={url}
+                imgUrl={imgUrl}
+                name={name}
+                description={description}
+                features={features}
+                code={code}
+                tech={tech}
+              />
+            </motion.div>
           </div>
         </div>
       </div>

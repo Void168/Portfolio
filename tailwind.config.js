@@ -27,10 +27,14 @@ export default {
         primary: '#0a0a0a',
         accent: '#B809C3',
       },
+       height: {
+        '108': '26rem',
+      },
       backgroundImage: {
         site: "url('https://4kwallpapers.com/images/wallpapers/ios-13-stock-ipados-dark-green-black-background-amoled-ipad-4480x2520-794.jpg')",
         about: "url('./backgrounds/about.png')",
         services: "url('./backgrounds/services.png')",
+        project:"url('https://c4.wallpaperflare.com/wallpaper/726/764/940/dark-green-minimalism-geometry-abstraction-wallpaper-preview.jpg')",
         pj1: "url('/sfsff.png')",
         pj2: "url('/Image/projects/chefhoangdung.png')",
         pj3: "url('./Image/projects/spotify_clone.png')",
