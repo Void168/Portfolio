@@ -8,7 +8,7 @@ import Navbar from './components/Navbar'
 
 function App() {
   return (
-    <div className="bg-site bg-cover bg-fixed overflow-hidden">
+    <div className="bg-site bg-cover bg-fixed overflow-hidden h-[4500px]">
       <header>
         <Header />
         <Banner />
