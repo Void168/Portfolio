@@ -55,11 +55,11 @@ const additionalKnowledge = [
 
 function About() {
   const [ref, inView] = useInView({
-    threshold: 0.5,
+    threshold: 0,
   })
   return (
-    <section className="section justify-center" id="about" ref={ref}>
-      <div className="container mx-auto">
+    <section className="section justify-center xl:h-full lg:h-[2000px] xs:h-[2500px]" id="about" ref={ref}>
+      <div className="md:container md:mx-auto">
         <div className="flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen">
           <motion.div
             variants={fadeIn('right', 0.3)}
@@ -96,14 +96,14 @@ function About() {
             <div className="flex lg:justify-start justify-center gap-x-6 lg:gap-x-10 mb-12">
               <div>
                 <div className="mb-2">
-                  {inView ? (
+                  {inView && (
                     <>
                       <span className="text-4xl text-gradient">
                         <CountUp start={0} end={2} duration={2} />
                       </span>
                       <span className="text-4xl text-gradient"> Years</span>
                     </>
-                  ) : null}
+                  )}
                 </div>
                 <div className="text-2xl uppercase">
                   Have known about <br /> Front-end
@@ -111,13 +111,13 @@ function About() {
               </div>
               <div>
                 <div className="mb-2">
-                  {inView ? (
+                  {inView && (
                     <>
                       <span className="text-4xl text-gradient">
                         <CountUp start={0} end={6} duration={2} />+
                       </span>
                     </>
-                  ) : null}
+                  )}
                 </div>
                 <div className="text-2xl uppercase">Projects</div>
               </div>
@@ -137,7 +137,7 @@ function About() {
           </motion.div>
         </div>
         <motion.div
-          variants={fadeIn('up', 0.5)}
+          variants={fadeIn('up', 0.3)}
           initial="hidden"
           whileInView={'show'}
           viewport={{ once: false, amount: 0.7 }}

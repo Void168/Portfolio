@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 import emailjs from '@emailjs/browser'
 
@@ -24,6 +24,11 @@ function Contact() {
         (result) => {
           console.log(result.text)
           alert('Message sent')
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+          })
         },
         (error) => {
           console.log(error.text)
@@ -32,8 +37,8 @@ function Contact() {
   };
 
   return (
-    <section className="lg:section py-16" id="contact">
-      <div className="container mx-auto">
+    <section className="lg:section py-16 h-[1000px]" id="contact">
+      <div className="md:container md:mx-auto xs:mx-8">
         <div className="flex flex-col lg:flex-row">
           <motion.div
             variants={fadeIn('up', 0.3)}
@@ -60,20 +65,13 @@ function Contact() {
             ref={form}
             onSubmit={sendEmail}
           >
+            <input type="text" placeholder="Your name" name="user_name"></input>
             <input
-              className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-green-400 transition-all"
-              type="text"
-              placeholder="Your name"
-              name="user_name"
-            ></input>
-            <input
-              className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-green-400 transition-all"
               type="text"
               placeholder="Your email"
               name="user_email"
             ></input>
             <textarea
-              className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-green-400 transition-all resize-none"
               type="text"
               placeholder="Your message"
               name="message"

@@ -6,13 +6,13 @@ import { fadeIn } from '../variants'
 
 import data from '../data'
 
-import Project from './Project'
+import Project from './Project/Project'
 
 function Work() {
   const [projects, setProjects] = useState([...data])
 
   return (
-    <section className="section" id="work">
+    <section className="section  xl:h-[1200px] " id="work">
       <div className="container mx-auto">
         <div>
           <div>

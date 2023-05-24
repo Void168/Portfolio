@@ -76,7 +76,7 @@ const data = [
     imgUrl: 'bg-pj4',
     content: 'Food Sales Website',
     tech: ['ReactJs', 'MUI', 'CSS', 'Redux', 'NodeJs', 'ExpressJs', 'MongoDB'],
-    url: 'https://github.com/Void168/Hfood-reup',
+    url: 'blank',
     code: 'https://github.com/Void168/Hfood-reup',
     description:
       'This is my graduation thesis but not deploy on site yet. This app was built using React JS for front-end; MongoDb, Express Js, Node Js for back-end and is hosted on Render.com .I had build a completely customized eCommerce application with the MERN stack with the following functionality',
@@ -100,7 +100,7 @@ const data = [
     imgUrl: 'bg-pj5',
     content: 'Practice React Native by building food order app',
     tech: ['React Native', 'Tailwind CSS', 'Redux Toolkit', 'Sanity.io'],
-    url: 'https://github.com/Void168/FoodApp',
+    url: 'blank',
     code: 'https://github.com/Void168/FoodApp',
     description: 'This is the practice project about react native',
     features: [

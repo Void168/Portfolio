@@ -5,10 +5,11 @@ import Work from './components/Work'
 import Header from './components/Header'
 import Banner from './components/Banner'
 import Navbar from './components/Navbar'
+import AirPlane from './components/AirPlane'
 
 function App() {
   return (
-    <div className="bg-site bg-cover bg-fixed overflow-hidden h-[4500px]">
+    <div className="bg-site bg-cover bg-fixed overflow-hidden">
       <header>
         <Header />
         <Banner />
@@ -21,6 +22,7 @@ function App() {
         <div></div>
       </main>
       <footer></footer>
+      <AirPlane />
     </div>
   )
 }

@@ -2,8 +2,8 @@ import React from 'react'
 
 function Header() {
   return (
-    <header className="py-8">
-      <div className="container mx-auto">
+    <header className="py-8 md:container md:mx-auto xs:mx-8">
+      <div className="md:container md:mx-auto">
         <div className="flex justify-between items-center">
           <a href="#">
             <img
@@ -12,9 +12,9 @@ function Header() {
               alt="logo"
             />
           </a>
-          <button className="btn btn-sm font-bold text-xl shadow-2xl">
+          <div className="btn btn-sm font-bold text-xl shadow-2xl cursor-grab">
             Work with me
-          </button>
+          </div>
         </div>
       </div>
     </header>

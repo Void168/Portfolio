@@ -91,6 +91,53 @@
   position: absolute;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  width: 200px;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: ' ';
+  position: absolute;
+  bottom: 100%;
+  left: 30%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.airplane {
+  position: absolute;
+  z-index:10;
+  margin-left: -4px;
+  top: 60px;
+  bottom: 60px;
+}
+
 @layer base {
   body {
     @apply text-lg leading-8 text-white;
@@ -117,7 +164,7 @@
     @apply bg-gradient-to-r text-transparent bg-clip-text from-[#fff] to-[#21D563] font-bold font-primary hover:from-[#21D563] hover:to-[#fff] ease-in-out duration-200;
   }
   .section {
-    @apply py-8 lg:h-full flex items-center;
+    @apply container mx-auto py-8 flex items-center;
   }
 
   #avatar {
@@ -144,5 +191,14 @@
   .card__zoom--image:hover ul,
   .card__zoom--image:hover div {
     @apply flex;
+  }
+
+  input,
+  textarea {
+    @apply bg-transparent border-b py-3 px-2 outline-none w-full placeholder:text-white focus:border-green-400 transition-all;
+  }
+
+  textarea {
+    @apply resize-none;
   }
 }

@@ -3,7 +3,7 @@ import Box from '@mui/material/Box'
 import Modal from '@mui/material/Modal'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { fadeIn } from '../variants'
+import { fadeIn } from '../../variants'
 
 const style = {
   position: 'absolute',
@@ -43,7 +43,7 @@ function ProjectModal({
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style} className="rounded-2xl shadow-2xl xs:h-5/6	sm:h-[70%]">
+        <Box sx={style} className="rounded-2xl shadow-2xl max-h-max">
           <div
             className={` ${imgUrl} bg-cover bg-no-repeat rounded-t-2xl sm:h-48 xs:h-32 w-full`}
           >
@@ -52,7 +52,7 @@ function ProjectModal({
             </div>
           </div>
           <div className="sm:pl-8 xs:pl-0 bg-project bg-cover bg-scroll">
-            <div className="flex sm:flex-row xs:flex-col-reverse sm:justify-around xs:justify-start overflow-auto sm:h-108 xs:h-[600px]">
+            <div className="flex sm:flex-row xs:flex-col-reverse sm:justify-around xs:justify-start overflow-auto sm:h-108 xs:h-[500px]">
               <div className="px-4">
                 <div className="sm:my-4 xs:my-0">
                   <p className="sm:text-3xl xs:text-xl mb-4">
@@ -72,8 +72,8 @@ function ProjectModal({
                       </li>
                     ))}
                   </ul>
-                  <div className="my-4">
-                    {url !== null ? (
+                  <div className="my-4 flex sm:flex-row flex-wrap xs:items-center xs:justify-center sm:justify-normal">
+                    {url !== "blank" ? (
                       <Link to={url} target="_blank">
                         <motion.button className="px-8 mx-2 border-2 rounded-full hover:bg-white hover:bg-opacity-70 hover:text-black duration-150 ease-in-out hover:shadow-2xl hover:shadow-gray-400">
                           View

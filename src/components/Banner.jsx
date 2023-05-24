@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
-import { FaGithub, FaFacebook, FaDribbble } from 'react-icons/fa'
+import { FaGithub, FaFacebook, FaGoogle } from 'react-icons/fa'
 
 import { TypeAnimation } from 'react-type-animation'
 
@@ -11,12 +11,18 @@ import { fadeIn } from '../variants'
 import { Link } from 'react-scroll'
 
 function Banner() {
+  const email = useRef()
+  const handleCopy = () => {
+    navigator.clipboard.writeText(email.current.innerHTML)
+    alert("Copied email!")
+  }
+
   return (
     <section
-      className="min-h-[85vh] lg:min-h-[78vh] flex items-center"
+      className="min-h-[85vh] lg:min-h-[78vh] flex items-center md:container md:mx-auto"
       id="home"
     >
-      <div className="container mx-auto">
+      <div className="md:container md:mx-auto xs:mx-8">
         <div className="flex flex-col gap-y-8 lg:flex-row lg:items-center lg:gap-x-12">
           <div className="flex-1 text-center lg:text-left">
             <motion.p
@@ -90,6 +96,13 @@ function Banner() {
               <a href="https://zalo.me/0866243888" target="_blank">
                 <img src="../zalo.png" alt="zalo" className="h-8" />
               </a>
+
+              <div className="tooltip cursor-pointer">
+                <FaGoogle onClick={handleCopy} />
+                <span className="tooltiptext" ref={email}>
+                  phuhung16820@gmail.com
+                </span>
+              </div>
             </motion.div>
           </div>
 
