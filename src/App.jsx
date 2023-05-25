@@ -6,10 +6,12 @@ import Header from './components/Header'
 import Banner from './components/Banner'
 import Navbar from './components/Navbar'
 import AirPlane from './components/AirPlane'
+import Clock from './components/Clock/Clock'
 
 function App() {
   return (
     <div className="bg-site bg-cover bg-fixed overflow-hidden">
+      <Clock />
       <header>
         <Header />
         <Banner />

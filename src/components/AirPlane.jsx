@@ -79,7 +79,7 @@ function AirPlane() {
           className="absolute xl:left-[1%] lg:left-[1.5%] top-3 z-50 high p-2 bg-white text-black shadow-lg rounded-2xl"
           ref={high}
         >
-          {fromGround > 2000 ? fromGround : 0} m
+          {fromGround > 2200 ? fromGround : 0} m
         </span>
         <div
           className="airplane xl:h-full lg:h-[4800px] xl:left-[8%] lg:left-[5%]"

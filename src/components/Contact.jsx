@@ -76,7 +76,7 @@ function Contact() {
               placeholder="Your message"
               name="message"
             ></textarea>
-            <button className="btn btn-lg" type="submit">
+            <button className="btn lg:btn-lg" type="submit">
               Send message
             </button>
           </motion.form>

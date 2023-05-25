@@ -58,9 +58,13 @@ function About() {
     threshold: 0,
   })
   return (
-    <section className="section justify-center xl:h-full lg:h-[2000px] xs:h-[2500px]" id="about" ref={ref}>
+    <section
+      className="section justify-center xl:h-full sm:h-[2000px] xs:h-[3000px]"
+      id="about"
+      ref={ref}
+    >
       <div className="md:container md:mx-auto">
-        <div className="flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen">
+        <div className="flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-full">
           <motion.div
             variants={fadeIn('right', 0.3)}
             initial="hidden"
@@ -129,7 +133,7 @@ function About() {
               viewport={{ once: false, amount: 0.7 }}
               className="flex items-center max-w-max gap-x-6 mb-12 lg:mx-0 mx-auto lg-mx-0"
             >
-              <button className="btn btn-lg mr-4">Contact me</button>
+              <button className="btn lg:btn-lg  mr-4">Contact me</button>
               <a href="#" className="text-gradient btn-link">
                 My Portfolio
               </a>
@@ -138,7 +142,7 @@ function About() {
         </div>
         <motion.div
           variants={fadeIn('up', 0.3)}
-          initial="hidden"
+          initial={false}
           whileInView={'show'}
           viewport={{ once: false, amount: 0.7 }}
           className="container mx-auto flex flex-col justify-center items-center"
@@ -159,7 +163,7 @@ function About() {
           </p>
           <ul className="grid md:grid-cols-2 xs:grid-cols-1 gap-4">
             {additionalKnowledge.map((add) => (
-              <li className="bg-green-300 text-black hover:scale-105 duration-300 flex flex-row justify-evenly items-center w-full m-2 p-2 shadow-md shadow-green-400 rounded-xl">
+              <li className="bg-green-300 text-black hover:scale-105 duration-300 flex flex-wrap justify-evenly items-center w-full m-2 p-2 shadow-md shadow-green-400 rounded-xl">
                 <img src={add.img} alt="logo" className="w-22 h-20" />
                 <p>{add.name}</p>
               </li>
