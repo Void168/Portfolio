@@ -1,6 +1,8 @@
-import React, { useEffect } from 'react'
-
+import React, { useContext, useEffect } from 'react'
+import { AppContext } from '../../context/AppContext'
 function Clock() {
+  const { play } = useContext(AppContext)
+
   useEffect(() => {
     setInterval(() => {
       let hh = document.getElementById('hh')
@@ -33,7 +35,7 @@ function Clock() {
   return (
     <div className="fixed z-50 right-4 flex flex-col justify-center items-center">
       <div className="holder w-[30px] h-[20px] m-auto bg-white rounded-b-full"></div>
-      <div className="flex flex-col justify-center items-center thread">
+      <div className={play ? `flex flex-col justify-center items-center` : `flex flex-col justify-center items-center thread`}>
         <div className="string w-[2px] h-[200px] bg-white rounded-lg"></div>
         <div className="clock w-[280px] h-[280px] before:w-[2px] flex justify-center items-center rounded-full shadow-2xl scale-[0.7] shadow-[#227942]">
           <div

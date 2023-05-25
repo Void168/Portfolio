@@ -297,17 +297,25 @@
 }
 
 .thread {
-transform-origin: 50% -5%;
-  animation: movit 3s alternate ease-in-out infinite;
+  transform-origin: 50% -5%;
+  animation: movit 3s alternate ease-in-out;
 }
 
 @keyframes movit {
-  0%,
-  100% {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
     transform: rotate(10deg);
   }
   50% {
+    transform: rotate(0deg);
+  }
+  75% {
     transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 

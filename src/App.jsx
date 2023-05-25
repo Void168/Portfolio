@@ -1,4 +1,3 @@
-import { Route, Routes } from 'react-router-dom'
 import About from './components/About'
 import Contact from './components/Contact'
 import Work from './components/Work'
@@ -7,25 +6,28 @@ import Banner from './components/Banner'
 import Navbar from './components/Navbar'
 import AirPlane from './components/AirPlane'
 import Clock from './components/Clock/Clock'
+import { AppProvider } from './context/AppContext'
 
 function App() {
   return (
-    <div className="bg-site bg-cover bg-fixed overflow-hidden">
-      <Clock />
-      <header>
-        <Header />
-        <Banner />
-        <Navbar />
-      </header>
-      <main>
-        <About />
-        <Work />
-        <Contact />
-        <div></div>
-      </main>
-      <footer></footer>
-      <AirPlane />
-    </div>
+    <AppProvider>
+      <div className="bg-site bg-cover bg-fixed overflow-hidden">
+        <Clock />
+        <header>
+          <Header />
+          <Banner />
+          <Navbar />
+        </header>
+        <main>
+          <About />
+          <Work />
+          <Contact />
+          <div></div>
+        </main>
+        <footer></footer>
+        <AirPlane />
+      </div>
+    </AppProvider>
   )
 }
 
