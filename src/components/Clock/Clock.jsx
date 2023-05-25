@@ -33,7 +33,7 @@ function Clock() {
     })
   }, [])
   return (
-    <div className="fixed z-50 right-4 flex flex-col justify-center items-center">
+    <div className="fixed z-50 right-4 flex flex-col justify-center items-center lg:block xs:hidden">
       <div className="holder w-[30px] h-[20px] m-auto bg-white rounded-b-full"></div>
       <div className={play ? `flex flex-col justify-center items-center` : `flex flex-col justify-center items-center thread`}>
         <div className="string w-[2px] h-[200px] bg-white rounded-lg"></div>
