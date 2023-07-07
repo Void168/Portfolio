@@ -19,10 +19,6 @@ function Work() {
             {/* text */}
             <div>
               <p className="h2 leading-tight">My Lastest Work</p>
-              <p className="h3">
-                My projects (Mostly I did it alone, I have references on youtube
-                too, but I know how to make them my own :) )
-              </p>
               <a
                 href="https://github.com/Void168?tab=repositories"
                 target="_blank"

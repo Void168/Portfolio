@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 
-import { FaGithub, FaFacebook, FaGoogle } from 'react-icons/fa'
+import { FaGithub, FaFacebook, FaGoogle, FaLinkedin } from 'react-icons/fa'
 
 import { TypeAnimation } from 'react-type-animation'
 
@@ -103,6 +103,12 @@ function Banner() {
                   phuhung16820@gmail.com
                 </span>
               </div>
+              <a
+                href="https://www.linkedin.com/in/l%C3%AA-h%C6%B0ng-332877215/"
+                target="_blank"
+              >
+                <FaLinkedin />
+              </a>
             </motion.div>
           </div>
 

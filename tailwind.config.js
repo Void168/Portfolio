@@ -40,7 +40,7 @@ export default {
         pj3: "url('./Image/projects/spotify_clone.png')",
         pj4: "url('https://img.freepik.com/free-vector/restaurant-mural-wallpaper_23-2148704189.jpg')",
         pj5: "url('https://i.ytimg.com/vi/pMR_3FQxdYo/maxresdefault.jpg')",
-        pj6: "url('./Image/projects/portfolio.png')"
+        pj6: "url('./Image/projects/bookingapp.png')"
       },
     },
   },
