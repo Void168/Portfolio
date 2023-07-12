@@ -3,7 +3,6 @@ import Box from '@mui/material/Box'
 import Modal from '@mui/material/Modal'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { fadeIn } from '../../variants'
 
 const style = {
   position: 'absolute',
@@ -66,14 +65,17 @@ function ProjectModal({
                 <div className="py-4">
                   <p className="sm:text-3xl xs:text-xl mb-4">Features</p>
                   <ul className="grid sm:grid-cols-1 xs:grid-cols-2">
-                    {features.map((feature) => (
-                      <li className="lg:text-lg sm:text-base xs:text-sm">
+                    {features.map((feature, index) => (
+                      <li
+                        key={index}
+                        className="lg:text-lg sm:text-base xs:text-sm"
+                      >
                         - {feature}
                       </li>
                     ))}
                   </ul>
                   <div className="my-4 flex sm:flex-row flex-wrap xs:items-center xs:justify-center sm:justify-normal">
-                    {url !== "blank" ? (
+                    {url !== 'blank' ? (
                       <Link to={url} target="_blank">
                         <motion.button className="px-8 mx-2 border-2 rounded-full hover:bg-white hover:bg-opacity-70 hover:text-black duration-150 ease-in-out hover:shadow-2xl hover:shadow-gray-400">
                           View
@@ -94,8 +96,11 @@ function ProjectModal({
                   Technologies
                 </p>
                 <ul className="shadow-2xl p-2 text-black bg-white shadow-emerald-500 rounded-lg grid sm:grid-cols-1 xs:grid-cols-3">
-                  {tech.map((t) => (
-                    <li className="my-2 lg:text-lg sm:text-base xs:text-sm">
+                  {tech.map((t, index) => (
+                    <li
+                      key={index}
+                      className="my-2 lg:text-lg sm:text-base xs:text-sm"
+                    >
                       {t}
                     </li>
                   ))}

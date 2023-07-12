@@ -14,7 +14,6 @@ function App() {
       <div className="bg-site bg-cover bg-fixed overflow-hidden">
         <Clock />
         <header>
-          <Header />
           <Banner />
           <Navbar />
         </header>

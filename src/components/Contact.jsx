@@ -37,7 +37,7 @@ function Contact() {
   };
 
   return (
-    <section className="lg:section py-16 h-[1000px]" id="contact">
+    <section className="lg:section py-16 h-[1200px]" id="contact">
       <div className="md:container md:mx-auto xs:mx-8">
         <div className="flex flex-col lg:flex-row">
           <motion.div

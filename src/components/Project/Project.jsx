@@ -35,8 +35,11 @@ function Project({
                 viewport={{ once: false, amount: 0.7 }}
                 className="flex flex-row flex-wrap justify-center"
               >
-                {tech.map((t) => (
-                  <li className="text-sm text-center border-[#6EE7B7] border-2 m-2 px-2 py-1 rounded-full shadow-sm shadow-green-200">
+                {tech.map((t, index) => (
+                  <li
+                    key={index}
+                    className="text-sm text-center border-[#6EE7B7] border-2 m-2 px-2 py-1 rounded-full shadow-sm shadow-green-200"
+                  >
                     {t}
                   </li>
                 ))}

@@ -116,7 +116,7 @@ const data = [
     _id: '6',
     name: 'Booking App',
     imgUrl: 'bg-pj6',
-    content: 'Booking App',
+    content: 'Practice NextJS and Typescript',
     tech: ['NextJS', 'Typescript', 'Tailwind CSS', 'Prisma', 'MongoDB', 'Zustand'],
     url: 'https://booking-brown.vercel.app/',
     code: 'https://github.com/Void168/Booking',
