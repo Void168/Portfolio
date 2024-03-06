@@ -37,7 +37,7 @@ function Contact() {
   };
 
   return (
-    <section className="lg:section py-16 h-[1200px]" id="contact">
+    <section className="lg:section py-16 sm:h-[1200px] xs:h-[1000px]" id="contact">
       <div className="md:container md:mx-auto xs:mx-8">
         <div className="flex flex-col lg:flex-row">
           <motion.div
@@ -61,7 +61,7 @@ function Contact() {
             initial="hidden"
             whileInView={'show'}
             viewport={{ once: false, amount: 0.7 }}
-            className="flex-1 mx-12 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start"
+            className="flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start"
             ref={form}
             onSubmit={sendEmail}
           >

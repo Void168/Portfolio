@@ -12,7 +12,7 @@ function Work() {
   const [projects, setProjects] = useState([...data])
 
   return (
-    <section className="section  xl:h-[1200px] " id="work">
+    <section className="section xl:h-[1200px] xs:h-full" id="work">
       <div className="container mx-auto">
         <div>
           <div>

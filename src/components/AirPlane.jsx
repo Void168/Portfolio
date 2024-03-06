@@ -17,7 +17,7 @@ function AirPlane() {
     Math.max(document.body.scrollHeight) - document.documentElement.scrollTop - 1000
     const fromGround = 8000 -
     Math.round(pageYOffset * (10000 / document.body.scrollHeight))
-  console.log(fromGround)
+    
   useEffect(() => {
     const el1 = imgRef.current;
     const el2 = high.current;
@@ -74,7 +74,7 @@ function AirPlane() {
     <div className="lg:block xs:hidden">
       <div className="flex">
         <span
-          className="absolute xl:left-[1%] lg:left-[1.5%] top-5 z-50 high p-2 bg-white text-black shadow-lg rounded-2xl"
+          className={fromGround > 4000 ? 'absolute xl:left-[1%] lg:left-[1.5%] text-emerald-600 top-5 z-50 high p-2 bg-white shadow-lg rounded-2xl font-semibold' : 'absolute xl:left-[1%] lg:left-[1.5%] top-5 z-50 high p-2 bg-white shadow-lg rounded-2xl font-semibold text-rose-600'}
           ref={high}
         >
           {fromGround > 200 ? fromGround : 0} m

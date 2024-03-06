@@ -8,6 +8,8 @@ import { motion } from 'framer-motion'
 
 import { fadeIn } from '../variants'
 
+import { Link } from 'react-scroll'
+
 const skills = [
   {
     id: '1',
@@ -61,6 +63,26 @@ const additionalKnowledge = [
     name: 'MongoDB(Mongoose)',
     img: 'https://newrelic.com/sites/default/files/styles/800w/public/2021-10/mongo_logo.jpg?itok=Z1PabBZB',
   },
+  {
+    id: '5',
+    name: 'VueJS',
+    img: 'https://th.bing.com/th/id/OIP.Ru4Moq5u93afm4fYg5lXFgHaDt?rs=1&pid=ImgDetMain',
+  },
+  {
+    id: '6',
+    name: 'Django',
+    img: 'https://www.gktcs.com/media/images/course_thumbnails/Python-django.jpg',
+  },
+  {
+    id: '7',
+    name: 'TypeScript',
+    img: 'https://th.bing.com/th/id/R.cbe1661c8fbf17182176a37af690469b?rik=s1xt0yqByQbsaA&pid=ImgRaw&r=0',
+  },
+  {
+    id: '8',
+    name: 'NextJS',
+    img: 'https://www.drupal.org/files/project-images/nextjs-drupal.jpg',
+  },
 ]
 
 function About() {
@@ -69,12 +91,12 @@ function About() {
   })
   return (
     <section
-      className="section justify-center xl:h-full sm:h-[2000px] xs:h-[3000px]"
+      className="section justify-center xl:h-full sm:h-[2000px] xs:h-[3200px]"
       id="about"
       ref={ref}
     >
       <div className="md:container md:mx-auto">
-        <div className="flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-full">
+        <div className="flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0">
           <motion.div
             variants={fadeIn('right', 0.3)}
             initial="hidden"
@@ -96,14 +118,13 @@ function About() {
             className="flex-1 lg:text-left text-center"
           >
             <p className="text-6xl text-lime-500">About me</p>
-            <p className="my-4">
+            <p className="my-4 sm:text-lg xs:text-base">
               I am Le Phu Hung. I have started my journey with programming back
               in 2018 on University of Economics Ho Chi Minh City (UEH) with a
-              major in software engineering. In my journey of programming, the
-              first language that I learned was C# (basics) in my freshman year
-              at university (last semester in 2019). But in the next year, I was
+              major in software engineering. In my journey of programming, the freshman year
+              at university was the bored Economics theory. But in the next year, I was
               interested in web development. Firstly, I started with the
-              front-end in the end of 2020 (10/2020). After more than 2 years of
+              front-end in the end of 2020 (10/2020). After more than 3 years of
               learning and did a few personal projects in frontend, I am
               confident that I can become a frontend developer.
             </p>
@@ -113,7 +134,7 @@ function About() {
                   {inView && (
                     <>
                       <span className="text-4xl text-gradient">
-                        <CountUp start={0} end={2} duration={2} />
+                        <CountUp start={0} end={3} duration={2} />
                       </span>
                       <span className="text-4xl text-gradient"> Years</span>
                     </>
@@ -143,7 +164,9 @@ function About() {
               viewport={{ once: false, amount: 0.7 }}
               className="flex items-center max-w-max gap-x-6 mb-12 lg:mx-0 mx-auto lg-mx-0"
             >
-              <button className="btn lg:btn-lg  mr-4">Contact me</button>
+              <Link to="contact" activeClass="active" smooth={true} spy={true}>
+                <button className="btn sm:btn-lg xs:btn-sm mr-4">Contact me</button>
+              </Link>
               <a href="#" className="text-gradient btn-link">
                 My Portfolio
               </a>

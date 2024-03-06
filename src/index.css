@@ -118,14 +118,12 @@
   width: 200px;
   top: 150%;
   left: 50%;
-  margin-left: -60px;
 }
 
 .tooltip .tooltiptext::after {
   content: ' ';
   position: absolute;
   bottom: 100%;
-  left: 30%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
@@ -345,7 +343,7 @@
     @apply bg-gradient-to-r text-transparent bg-clip-text from-[#fff] to-[#21D563] font-bold font-primary hover:from-[#21D563] hover:to-[#fff] ease-in-out duration-200;
   }
   .section {
-    @apply container mx-auto py-8 flex items-center;
+    @apply sm:mx-auto py-8 flex items-center mx-4;
   }
 
   #avatar {

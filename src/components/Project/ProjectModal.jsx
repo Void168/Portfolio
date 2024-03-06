@@ -32,7 +32,7 @@ function ProjectModal({
     <div>
       <button
         onClick={handleOpen}
-        className="rounded-2xl font-medium px-8 py-1 border-2 border-white shadow-sm cursor-pointer hover:bg-green-300 hover:text-black ease-in-out duration-300"
+        className="rounded-2xl font-medium px-8 py-1 border-2 border-white shadow-sm cursor-pointer hover:bg-green-300 hover:text-black ease-in-out duration-300 hover:bg-opacity-70"
       >
         More Info
       </button>
@@ -44,7 +44,7 @@ function ProjectModal({
       >
         <Box sx={style} className="rounded-2xl shadow-2xl max-h-max">
           <div
-            className={` ${imgUrl} bg-cover bg-no-repeat rounded-t-2xl sm:h-48 xs:h-32 w-full`}
+            className={` ${imgUrl} bg-cover bg-center bg-no-repeat rounded-t-2xl sm:h-48 xs:h-32 w-full`}
           >
             <div className="bg-black flex flex-col justify-end h-full bg-opacity-60">
               <p className="sm:text-5xl xs:text-4xl mb-8 ml-12">{name}</p>
@@ -64,7 +64,7 @@ function ProjectModal({
 
                 <div className="py-4">
                   <p className="sm:text-3xl xs:text-xl mb-4">Features</p>
-                  <ul className="grid sm:grid-cols-1 xs:grid-cols-2">
+                  <ul className="grid grid-cols-1 gap-2">
                     {features.map((feature, index) => (
                       <li
                         key={index}
@@ -74,7 +74,7 @@ function ProjectModal({
                       </li>
                     ))}
                   </ul>
-                  <div className="my-4 flex sm:flex-row flex-wrap xs:items-center xs:justify-center sm:justify-normal">
+                  <div className="my-4 flex sm:flex-row flex-wrap xs:items-center xs:justify-center sm:justify-normal gap-2">
                     {url !== 'blank' ? (
                       <Link to={url} target="_blank">
                         <motion.button className="px-8 mx-2 border-2 rounded-full hover:bg-white hover:bg-opacity-70 hover:text-black duration-150 ease-in-out hover:shadow-2xl hover:shadow-gray-400">
@@ -95,7 +95,7 @@ function ProjectModal({
                 <p className="sm:text-2xl xs:text-xl sm:mb-8 xs:mb-2">
                   Technologies
                 </p>
-                <ul className="shadow-2xl p-2 text-black bg-white shadow-emerald-500 rounded-lg grid sm:grid-cols-1 xs:grid-cols-3">
+                <ul className="shadow-2xl p-2 text-black font-semibold bg-white shadow-emerald-500 rounded-lg grid sm:grid-cols-1 xs:grid-cols-3">
                   {tech.map((t, index) => (
                     <li
                       key={index}

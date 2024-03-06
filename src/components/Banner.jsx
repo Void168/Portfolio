@@ -30,7 +30,7 @@ function Banner() {
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
-              className="text-6xl mb-4 neon__text"
+              className="sm:text-6xl mb-4 neon__text xs:text-4xl sm:mt-0 xs:mt-4"
             >
               Lê Phú Hưng
             </motion.p>
@@ -59,7 +59,7 @@ function Banner() {
             >
               I’m focused on building responsive front-end web applications
               integrating back-end technologies. My goal in the future is to
-              become a full-stack developer.
+              become a senior full stack developer in 3-4 years.
             </motion.p>
             <motion.div
               variants={fadeIn('up', 1.2)}
@@ -69,7 +69,7 @@ function Banner() {
               className="flex items-center max-w-max gap-x-6 mb-12 lg:mx-0 mx-auto lg-mx-0"
             >
               <Link to="contact" activeClass="active" smooth={true} spy={true}>
-                <button className="btn btn-lg mr-4">Contact me</button>
+                <button className="btn sm:btn-lg xs:btn-sm mr-4">Contact me</button>
               </Link>
               <a href="#" className="text-gradient btn-link">
                 My Portfolio
@@ -99,7 +99,7 @@ function Banner() {
 
               <div className="tooltip cursor-pointer">
                 <FaGoogle onClick={handleCopy} />
-                <span className="tooltiptext" ref={email}>
+                <span className="tooltiptext sm:ml-[-60px] xs:ml-[-100px] sm:after:left-[30%] xs:after:left-[50%]" ref={email}>
                   phuhung16820@gmail.com
                 </span>
               </div>
@@ -120,7 +120,7 @@ function Banner() {
             className="my-8 flex justify-center items-center"
           >
             <img
-              className="rounded-full w-96 h-96 shadow-2xl"
+              className="rounded-full sm:w-96 sm:h-96 xs:w-48 h-48 shadow-2xl"
               src="../avatar.jpg"
               alt="avatar"
               id="avatar"
