@@ -122,7 +122,7 @@ const data = [
     imgUrl: 'bg-pj2',
     content: 'Build UI Landing Website',
     tech: ['ReactJs', 'CSS3'],
-    url: 'https://chefhoangdung.netlify.com/',
+    url: 'https://chefhoangdung.netlify.app/',
     code: 'https://github.com/Void168/Restaurant-UI',
     description:
       'This landing page was built using React JS and CSS with all responsive devices',
